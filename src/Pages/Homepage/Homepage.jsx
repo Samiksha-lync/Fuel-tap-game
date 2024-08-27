@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Homepage.css";
-import { useLyncTapContext } from "@lyncworld/lync-tap-sdk";
 
 function Home() {
     const [progress, setProgress] = useState(0);
