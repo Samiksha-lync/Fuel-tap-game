@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.header {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: 50px;
+}
+
+
+.navbar {
+    display: flex;
+}
+
+.navbar ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.items a {
+    font-size: medium;
+    font-family: "Montserrat", sans-serif;
+    color: rgb(165, 160, 153);
+    text-decoration: none;
+}
+
+.items a.active {
+    color: brown; 
+    font-weight: bold; 
+}
+
+
+.button {
+    background-color: #f0aa36;
+    height: 50px;
+    width: fit-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    padding: 0.5rem;
+    align-items: center;
+    gap: 0.7rem;
+    font-family: "Montserrat", sans-serif;
+    box-shadow:  rgba(0, 0, 0, 0.33) -3px -3px 5px 0 inset,
+    rgba(0, 0, 0, 0.25) 3px 3px 5px 0 inset,
+    rgba(0, 0, 0, 0.5) 3px 3px 10px 0;
+}
+
+
+.testnet {
+    background-color: rgb(131, 74, 16);
+    color: white;
+    height: 35px;
+    width: 80px;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.mainnet {
+    color: rgb(49, 27, 5);
+    font-weight: 500;
+}
+
+.coming-soon {
+    font-size: 10px;
+}
+
+
+.nav-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar.responsive_nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: absolute;
+    top: 70px; 
+    right: 20px;
+    background: #f0aa36;
+    width: calc(100% - 40px); 
+    height: 100vh;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 4;
+}
+
+.navbar.responsive_nav ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar.responsive_nav li {
+    margin: 10px 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        display: none; 
+    }
+
+    .nav-toggle {
+        display: block;
+        position: absolute;
+        right: 10px;
+    }
+
+    .button {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .items a {
+        color: white;
+    }
+}

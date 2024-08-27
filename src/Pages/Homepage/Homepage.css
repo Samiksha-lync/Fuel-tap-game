@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.main-container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    margin-top:30px;
+    align-items: center;
+    justify-content: center;
+}
+.tap-emoji img:active{
+    scale:0.9;
+}
+.game-container{
+    display: flex;
+    flex-direction: column;    
+    align-items: center;
+    gap:3rem;
+}
+.text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.text-1{
+    font-size: 2rem;
+    color: rgb(130, 60, 16);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+.text-2{
+    display: flex;
+    background-color:  rgb(130, 60, 16);
+    color: rgb(228, 225, 225);
+    border-radius: 40px;
+    font-family: "Montserrat", sans-serif;
+    height: 70px;
+    width: 500px;
+    box-shadow:  rgba(0, 0, 0, 0.33) -5px -5px 10px 0 inset,
+    rgba(0, 0, 0, 0.25) 5px 5px 10px 0 inset,
+    rgba(0, 0, 0, 0.5) 3px 3px 10px 0;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.tap-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:1rem;
+}
+.tap-emoji {
+    height: 420px;
+    width: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/public/tickel-background.svg");
+    background-repeat: no-repeat;
+    background-size:420px 420px;
+    background-position: center;
+    cursor: pointer;
+    box-shadow:  rgba(0, 0, 0, 0.33) -3px -3px 5px 0 inset,
+    rgba(0, 0, 0, 0.25) 3px 3px 5px 0 inset,
+    rgba(0, 0, 0, 0.5) 3px 3px 10px 0;
+    border-radius: 50%;
+}
+.tap-emoji img{
+    height: 80%;
+    width: 80%;
+}
+.progress-container{
+    display: flex;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.progress-bar-container {
+    width: 330px;
+    background-color: #773000;
+    border-radius: 5px;
+    position: relative;
+    border-radius: 15px;
+}
+
+.progress-bar {
+    height: 15px;
+    width: 200px;
+    background-color: #f2ad54; 
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+    transition: width 0.3s ease; 
+}
+
+.count {
+
+    color: rgb(11, 11, 11);
+    font-size: larger; 
+}
+.counter{
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: #773000;
+}
+
+.auto-tap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color:#773000;
+}
+
+.checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cac4c4;
+    transition: .4s;
+    border-radius: 34px;
+    box-shadow:  rgba(0, 0, 0, 0.33) -5px -5px 10px 0 inset,
+    rgba(0, 0, 0, 0.25) 3px 3px 7px 0 inset
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+.checkbox:checked + .switch .slider {
+    background-color: #f2ad54; 
+}
+
+.checkbox:checked + .switch .slider:before {
+    transform: translateX(26px);
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+}
+.stats-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #773000;
+}
+@media only screen and (max-width:800px){
+    .tap-emoji img{
+        height: 70%;
+        width: 70%;
+    }
+    .tap-emoji{
+        background-size:250px 250px ;
+        height: 250px;
+        width: 250px;
+    }
+}
+@media only screen and (max-width:500px){
+    .tap-emoji img{
+        height: 70%;
+        width: 70%;
+    }
+    .tap-emoji{
+        background-size:250px 250px ;
+        height: 250px;
+        width: 250px;
+    }
+    .text-2{
+        width:350px;
+        font-size: 0.8rem;
+    }
+}
